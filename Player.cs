@@ -39,7 +39,7 @@ public class Player : Entity
 
     protected override void Update()
     {
-        base.Update();CollisionCheck();
+        base.Update();
 
         //* 檢測和輸入
         CheckInput();
@@ -49,7 +49,7 @@ public class Player : Entity
         dashCoolDownTimer -= Time.deltaTime;
 
         comboIntervalTimer -= Time.deltaTime;
-        print("work");
+        
         //* 執行函式
         Move();
         FlipController();

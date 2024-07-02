@@ -28,12 +28,15 @@ public class Entity : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+
+        if (wallCheck == null)
+            wallCheck = transform;
     }
 
 
     protected virtual void Update()
     {
-        // CollisionCheck();
+        CollisionCheck();
     }
     
     
